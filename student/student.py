@@ -1,11 +1,12 @@
 # Based on: https://replit.com/@ChrisMcAnally/Student-Solution#student.py
 
+
 class Student:
-    def __init__(self, name, level, courses = None):
+    def __init__(self, name, level, courses=None):
         self.name = name
         self.level = level
         if not courses:
-            corses = []
+            courses = []
         self.courses = courses
 
     def add_class(self, course_name):
@@ -17,7 +18,8 @@ class Student:
     def summary(self):
         return f"{self.name} is a {self.level} enrolled in {self.get_num_classes()} classes"
 
+
 def get_student_with_more_classes(student_a, student_b):
     if student_a.get_num_classes() > student_b.get_num_classes():
-        return student_b
+        return student_a
     return student_b
